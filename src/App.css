@@ -36,6 +36,11 @@ body {
   height: 200px;
 }
 
+.card-name{
+  font-size: 15px;
+  font-weight: bold;
+}
+
 .ft-container, .ft-buy{
   display:flex;
   flex-direction: row;
@@ -57,4 +62,30 @@ select{
 
 .price{
   font-weight: bold;
+}
+
+.loginform{
+  width: 400px;
+  height: 300px;
+  align-items: center;
+}
+
+.registerationform{
+  width: 400px;
+  height: 350px;
+  align-items: center;
+}
+
+label{
+  margin-top: 20px;
+}
+
+.reg, .login{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.user{
+  display: flex;
+  justify-content: center;
 }

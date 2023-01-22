@@ -1,6 +1,9 @@
 import './App.css';
-import { useState } from "react";
 import React from 'react';
+import { Navbar } from './Navbar';
+import { Homepage } from './Homepage';
+import { LoginForm } from './LoginForm';
+import { RegistrationForm } from './RegistrationForm';
 
 const PizzaData = [
   {
@@ -170,75 +173,10 @@ function App() {
       <div className='container-md'>
         {PizzaData.map(prl => <Homepage pizzas={prl} />)}
       </div>
+      <LoginForm />
+      <RegistrationForm />
     </div>
   );
 }
 
-function Navbar() {
-  return (
-    <div>
-      <nav className="navbar navbar-expand-lg shadow p-3 mb-5 bg-white rounded">
-        <a className="navbar-brand" href="#">Pizza App</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="#">Login</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Cart</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  )
-}
-
-function Homepage({ pizzas }) {
-
-  const [quantity, setQuantity] = useState(1)
-  const [varient, setVarient] = useState('small')
-
-  return (
-    <div className="row">
-      <div className="col-md-4 cont">
-        <div className="card shadow p-3 mb-5 bg-white rounded">
-          <h5>{pizzas.name}</h5>
-          <img src={pizzas.image} className='pizza-image' />
-
-          <div className='ft-container'>
-            <div>
-              <p>Varients</p>
-              <select className='form-control' value={varient} onChange={(e) => { setVarient(e.target.value) }}>{pizzas.varients.map(varient => {
-                return <option value={varient}>{varient}</option>
-              })}</select>
-            </div>
-            <div>
-              <p>Quantity</p>
-              <select className='form-control' value={quantity} onChange={(e) => { setQuantity(e.target.value) }}>
-                {
-                  [...Array(10).keys()].map((x, i) => {
-                    return <option value={i + 1}>{i + 1}</option>
-                  })
-                }
-              </select>
-            </div>
-          </div>
-
-          <div className="ft-buy">
-            <div>
-              <span className='price'>Price : {pizzas.prices[0][varient] * quantity} Rs/- </span>
-            </div>
-            <div>
-              <button type='submit' className='btn'>ADD TO CART</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
 export default App;
