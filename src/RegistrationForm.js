@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export function RegistrationForm() {
 
@@ -92,7 +93,7 @@ export function RegistrationForm() {
         <button onClick={handleSubmit} className="btn login" type="submit">
           Register
         </button>
-        <p className='reg'>Already have account <a href="#">Login</a> here...</p>
+        <p className='reg'>Already have account <Link to="#">Login</Link> here...</p>
       </form>
     </div>
   );

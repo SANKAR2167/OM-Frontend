@@ -4,6 +4,7 @@ import { Navbar } from './Navbar';
 import { Homepage } from './Homepage';
 import { LoginForm } from './LoginForm';
 import { RegistrationForm } from './RegistrationForm';
+import { Route, Routes, Link } from 'react-router-dom';
 
 const PizzaData = [
   {
@@ -170,13 +171,38 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <div className='container-md'>
-        {PizzaData.map(prl => <Homepage pizzas={prl} />)}
-      </div>
-      <LoginForm />
-      <RegistrationForm />
+      <Routes>
+        <Route path='*' element={<NotFound />} />
+        <Route path='/' element={<Welcome />} />
+        <Route path='/pizza' element={<Pizza />} />
+        <Route path='/login' element={<LoginForm />} />
+        <Route path='/register' element={<RegistrationForm />} />
+      </Routes>
+
     </div>
   );
+
+  function NotFound() {
+    return (
+      <div>
+        <h1>404 Page Not Found</h1>
+        <img className='error' src="https://atlassianblog.wpengine.com/wp-content/uploads/2017/12/44-incredible-404-error-pages@3x-1560x760.png" alt="" />
+        <span className='gohome'><Link to='/'>Go to Home</Link></span>
+      </div>
+    )
+  }
+  function Pizza() {
+    return <div className='container-md'>
+      {PizzaData.map(prl => <Homepage pizzas={prl} />)}
+    </div>;
+  }
 }
 
+function Welcome() {
+  return (
+    <div>
+      <h1>Wlcome to Pizza App</h1>
+    </div>
+  )
+}
 export default App;

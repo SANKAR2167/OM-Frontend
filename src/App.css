@@ -65,13 +65,13 @@ select{
 }
 
 .loginform{
-  width: 400px;
+  width: 350px;
   height: 300px;
   align-items: center;
 }
 
 .registerationform{
-  width: 400px;
+  width: 350px;
   height: 350px;
   align-items: center;
 }
@@ -88,4 +88,13 @@ label{
 .user{
   display: flex;
   justify-content: center;
+}
+
+.error{
+  width: 100%;
+  height: 100%;
+}
+
+.gohome{
+  font-size: 30px;
 }
