@@ -191,6 +191,17 @@ function App() {
       </div>
     )
   }
+
+  function Welcome() {
+    return (
+      <div>
+        <h1>Wlcome to Pizza App</h1>
+        <br />
+        <Pizza/>
+      </div>
+    )
+  }
+
   function Pizza() {
     return <div className='container-md'>
       {PizzaData.map(prl => <Homepage pizzas={prl} />)}
@@ -198,11 +209,5 @@ function App() {
   }
 }
 
-function Welcome() {
-  return (
-    <div>
-      <h1>Wlcome to Pizza App</h1>
-    </div>
-  )
-}
+
 export default App;
