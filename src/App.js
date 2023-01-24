@@ -174,7 +174,7 @@ function App() {
       <Routes>
         <Route path='*' element={<NotFound />} />
         <Route path='/' element={<Welcome />} />
-        <Route path='/pizza' element={<Pizza />} />
+        <Route path='/pizzas' element={<Pizza />} />
         <Route path='/login' element={<LoginForm />} />
         <Route path='/register' element={<RegistrationForm />} />
       </Routes>
