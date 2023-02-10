@@ -178,6 +178,7 @@ function App() {
         <Route path='/login' element={<LoginForm />} />
         <Route path='/register' element={<RegistrationForm />} />
         <Route path='/cart' element={<CartPage />} />
+        <Route path='/admin' element={<Admin />} />
       </Routes>
 
     </div>
@@ -221,6 +222,14 @@ function App() {
           <p>RS/-</p>
 
         </div>
+      </div>
+    )
+  }
+
+  function Admin(){
+    return(
+      <div>
+
       </div>
     )
   }

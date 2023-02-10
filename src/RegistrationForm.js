@@ -90,7 +90,7 @@ export function RegistrationForm() {
         <button onClick={handleSubmit} className="btn login" type="submit">
           Register
         </button>
-        <p className='reg'>Already have account <Link to="#">Login</Link> here...</p>
+        <p className='reg'>Already have account <Link to="/login">Login</Link> here...</p>
       </form>
     </div>
   );
