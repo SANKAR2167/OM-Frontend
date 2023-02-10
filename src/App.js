@@ -198,7 +198,7 @@ function App() {
       <div>
         <h1>Welcome to Pizza App</h1>
         <br />
-        
+
       </div>
     )
   }
@@ -209,8 +209,8 @@ function App() {
     </div>;
   }
 
-  function CartPage(){
-    return(
+  function CartPage() {
+    return (
       <div className='cart container-lg'>
         <div className='cart-list'>
           <h4>Item's List</h4>
