@@ -70,6 +70,13 @@ select{
   align-items: center;
 }
 
+.lg-box, .input{
+  width: 250px;
+  height: 30px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
 .registerationform{
   width: 350px;
   height: 350px;
@@ -97,4 +104,21 @@ label{
 
 .gohome{
   font-size: 30px;
+}
+
+.cart{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-list{
+  
+  height: auto;
+}
+
+.sub-total{
+  
 }

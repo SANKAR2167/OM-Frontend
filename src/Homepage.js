@@ -36,7 +36,7 @@ export function Homepage({ pizzas }) {
                 <span className='price'>Price : {pizzas.prices[0][varient] * quantity} Rs/- </span>
               </div>
               <div>
-                <button type='submit' className='btn' onClick={addtocart}>ADD TO CART</button>
+                <button type='submit' className='btn'>ADD TO CART</button>
               </div>
             </div>
           </div>

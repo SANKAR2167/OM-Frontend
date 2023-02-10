@@ -18,7 +18,7 @@ export function Navbar() {
               <Link className="nav-link" to="/login">Login</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="#">Cart</Link>
+              <Link className="nav-link" to="/cart">Cart</Link>
             </li>
           </ul>
         </div>

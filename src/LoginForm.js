@@ -15,21 +15,19 @@ export function LoginForm() {
     <div className='user'>
       <form onSubmit={handleSubmit} className='loginform shadow-lg p-3 mb-5 bg-white rounded'>
         <h4>Pizza App Login</h4>
-        <label>
-          Username:
-          <input
-            type="text"
-            value={username}
-            onChange={e => setUsername(e.target.value)} />
-        </label>
+        <input
+          className='lg-box'
+          type="text"
+          value={username}
+          onChange={e => setUsername(e.target.value)}
+          placeholder='Username' />
         <br />
-        <label>
-          Password:
-          <input
-            type="password"
-            value={password}
-            onChange={e => setPassword(e.target.value)} />
-        </label>
+        <input
+          className='lg-box'
+          placeholder='Password'
+          type="password"
+          value={password}
+          onChange={e => setPassword(e.target.value)} />
         <br />
         <button type="submit" className='btn login'>Login</button>
         <p className='reg'>Don't have account <Link to="/register">Register</Link> here...</p>

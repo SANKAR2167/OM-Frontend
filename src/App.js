@@ -174,9 +174,10 @@ function App() {
       <Routes>
         <Route path='*' element={<NotFound />} />
         <Route path='/' element={<Welcome />} />
-        <Route path='/pizzas' element={<Pizza />} />
+        <Route path='/pizza' element={<Pizza />} />
         <Route path='/login' element={<LoginForm />} />
         <Route path='/register' element={<RegistrationForm />} />
+        <Route path='/cart' element={<CartPage />} />
       </Routes>
 
     </div>
@@ -195,9 +196,9 @@ function App() {
   function Welcome() {
     return (
       <div>
-        <h1>Wlcome to Pizza App</h1>
+        <h1>Welcome to Pizza App</h1>
         <br />
-        <Pizza/>
+        
       </div>
     )
   }
@@ -206,6 +207,22 @@ function App() {
     return <div className='container-md'>
       {PizzaData.map(prl => <Homepage pizzas={prl} />)}
     </div>;
+  }
+
+  function CartPage(){
+    return(
+      <div className='cart container-lg'>
+        <div className='cart-list'>
+          <h4>Item's List</h4>
+
+        </div>
+        <div className='sub-total'>
+          <h4>Total Amount</h4>
+          <p>RS/-</p>
+
+        </div>
+      </div>
+    )
   }
 }
 

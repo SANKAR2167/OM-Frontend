@@ -78,17 +78,14 @@ export function RegistrationForm() {
       <form onSubmit={handleSubmit} className='registerationform shadow-lg p-3 mb-5 bg-white rounded'>
         <h4>Pizza App User Registration</h4>
         {/* Labels and inputs for form data */}
-        <label className="label">Username: </label>
         <input onChange={handleName} className="input"
-          value={name} type="text" /> <br />
-
-        <label className="label">Email: </label>
+          value={name} type="text" placeholder='Username'/> <br />
+        
         <input onChange={handleEmail} className="input"
-          value={email} type="email" /> <br />
+          value={email} type="email" placeholder='Email'/> <br />
 
-        <label className="label">Password: </label>
         <input onChange={handlePassword} className="input"
-          value={password} type="password" /> <br />
+          value={password} type="password" placeholder='Password'/> <br />
 
         <button onClick={handleSubmit} className="btn login" type="submit">
           Register
